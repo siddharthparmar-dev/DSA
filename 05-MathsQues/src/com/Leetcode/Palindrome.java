@@ -7,20 +7,20 @@ public class Palindrome {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the number: ");
         int n = input.nextInt();
-        System.out.println(palindrome(n));
+        System.out.println(isPalindrome(n));
+    }
+        static boolean isPalindrome(int x) {
+            if(x<0){
+                return false;
+            }
+            int rev = 0;
+            int  num= x;
 
-    }
-    static boolean palindrome(int x){
-        int num = x;
-        int reverse = 0;
-        if (x < 0){
-            return false;
+            while (num!= 0) {
+                rev= rev*10 + num%10;
+                num=num/10;
+            }
+
+            return (rev == x);
         }
-        while (x > 0){
-            int lastDigit = x % 10;
-            reverse = reverse * 10 + lastDigit;
-            x = x / 10;
-        }
-        return (reverse == num);
-    }
 }
