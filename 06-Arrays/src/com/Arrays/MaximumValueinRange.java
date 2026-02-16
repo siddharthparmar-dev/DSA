@@ -9,7 +9,7 @@ public class MaximumValueinRange {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the size of array: ");
         int[] arr = new  int[input.nextInt()];
-        System.out.println("Enter the elements inside ther array:");
+        System.out.println("Enter the elements inside the array:");
         for (int i = 0; i < arr.length; i++){
             arr[i] = input.nextInt();
         }

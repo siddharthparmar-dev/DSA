@@ -1,18 +1,24 @@
 package com.LinearSearch;
 
-    public class LinearSearch {
+import java.util.Scanner;
+
+public class LinearSearch {
     public static void main(String[] args) {
-    int[] array = {18,12,9,14,77,50};
-    int target = -144;
-    int result = linearSearch(array,target);
-    System.out.println("element found at index pos: " + result);
+        Scanner input  = new Scanner(System.in);
+        int[] arr = {85,69,74,25,36,98,55};
+        System.out.println("Enter the Target Element: ");
+        int target = input.nextInt();
+        System.out.println(inArray(arr,target));
     }
-        static int linearSearch(int[] arr, int target){
-            for (int i = 0; i < arr.length; i++){
-                if (arr[i] == target){
-                    return i;  //found element
-                }
-            }
-            return -1; // not found element
-        }
+
+    //return value if inside array otherwise -1
+    static int inArray(int[] arr, int target){
+        //using enhanced for loop
+     for (int n : arr){
+         if (n == target){
+             return target;
+         }
+     }
+        return -1;
+    }
 }
