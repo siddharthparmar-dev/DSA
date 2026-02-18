@@ -10,7 +10,7 @@ public class Palindrome {
         System.out.println(isPalindrome(n));
     }
         static boolean isPalindrome(int x) {
-            if(x<0){
+            if(x < 0){
                 return false;
             }
             int rev = 0;

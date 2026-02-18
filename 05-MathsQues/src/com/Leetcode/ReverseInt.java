@@ -1,5 +1,5 @@
 package com.Leetcode;
-
+// Leetcode Q.no : 7
 import java.util.Scanner;
 
 public class ReverseInt {
