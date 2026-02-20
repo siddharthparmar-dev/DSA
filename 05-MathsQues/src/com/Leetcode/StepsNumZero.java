@@ -8,8 +8,8 @@ public class StepsNumZero {
         System.out.println("Enter the number: ");
         int num = input.nextInt();
 
-        // my code:
 /*
+        // my code:
         int steps = 0;
         while (num > 0){
             if (num % 2 == 0){
