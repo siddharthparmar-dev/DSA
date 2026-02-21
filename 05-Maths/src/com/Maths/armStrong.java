@@ -1,4 +1,4 @@
-package com.Leetcode;
+package com.Maths;
 
 import java.util.Scanner;
 
