@@ -2,7 +2,7 @@ package com.Leetcode;
 // Leetcode Q no 2119
 import java.util.Scanner;
 
-public class DoubleReversal {
+public class DoubleRev {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int num = input.nextInt();

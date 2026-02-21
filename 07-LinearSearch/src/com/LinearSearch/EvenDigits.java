@@ -1,4 +1,4 @@
-package com.Leetcode;
+package com.LinearSearch;
 
 // Leetcode Q.no : 1295
 public class EvenDigits {
