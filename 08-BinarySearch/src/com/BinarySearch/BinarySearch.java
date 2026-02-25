@@ -4,10 +4,8 @@ import java.util.Arrays;
 
 public class BinarySearch {
     public static void main(String[] args) {
-        int[] arr = {87, 12, 45, 99, 3, 56, 78, 23, 67, 1,};
-        Arrays.sort(arr);
-        System.out.println(Arrays.toString(arr));
-        System.out.println(binarySearch(arr,12));
+        int[] arr = {9,11,13,17,21,27,33,41};
+        System.out.println(binarySearch(arr,21));
     }
     static int binarySearch(int[] arr,int target){
         int start = 0;
