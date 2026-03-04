@@ -2,10 +2,10 @@ package com.BinarySearch;
 
 public class RotatedSortedArray {
     public static void main(String[] args) {
-        int[] arr = {5,1,3};
+        int[] arr = {4,5,6,7,0,1,2};
         int peak = pivotElement(arr);
         System.out.println(peak);
-        int target = 3;
+        int target = 0;
         int leftSide = search(arr,target,0,peak);
         if (leftSide != -1){
             System.out.println(leftSide);
@@ -14,15 +14,28 @@ public class RotatedSortedArray {
         System.out.println(rightSide);
     }
     static int pivotElement(int[] arr) {
-        int max = arr[0];
-        int index = 0;
-        for (int i = 1; i < arr.length - 1; i++) {
-            if (arr[i] > max){
-                max = arr[i];
-                index = i;
-            }
-        }
-        return index;
+      int start = 0;
+      int end = arr.length - 1;
+      while(start <= end){
+          int mid = start + (end - start) / 2;
+          //case 1:
+          if (mid < end && arr[mid] > arr[mid + 1]){   // detect pivot element
+              return mid;
+          }
+          //case 2:
+          if (start < mid && arr[mid] < arr[mid -1]){     //detect pivot element
+              return mid -1;
+          }
+          //case 3:
+          if (arr[mid] >= arr[start]){         //decide direction... if not found by above two cases
+              start = mid + 1;
+          }
+          //case4
+          else {
+              end = mid - 1;
+          }
+      }
+      return -1;
     }
 
     static int search(int[] nums, int target,int start,int end) {
