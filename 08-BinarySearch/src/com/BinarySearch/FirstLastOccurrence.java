@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class FirstLastOccurrence {
 
     public static void main(String[] args) {
-        int[] arr = {5,7,7,7,8,9};
-        int[] ans = {first(arr,7), last(arr,7)};
+        int[] arr = {2,3,4,4,5,6,7,8,8,8,9,10};
+        int[] ans = {first(arr,8), last(arr,8)};
         System.out.println(Arrays.toString(ans));
     }
 

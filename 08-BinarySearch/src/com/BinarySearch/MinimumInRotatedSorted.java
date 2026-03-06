@@ -11,7 +11,7 @@ public class MinimumInRotatedSorted {
         int ans = Integer.MAX_VALUE;
         while (start <= end){
             int mid = start + (end - start) / 2;
-            if (arr[start] <= arr[end]){
+            if (arr[start] <= arr[mid]){
                 ans = Math.min(ans,arr[start]);
                 start = mid + 1;
             }

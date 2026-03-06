@@ -2,7 +2,7 @@ package com.BinarySearch;
 
 public class PeakElementRotatedSorted {
     public static void main(String[] args) {
-        int[] arr = {5,8,9,11,13,0,1,2,3};
+        int[] arr = {5,8,9,11,13,17,19,21,27,33,37,0,1,2,3};
         System.out.println(peakElement(arr));
     }
     static int peakElement(int[] arr){
@@ -17,7 +17,7 @@ public class PeakElementRotatedSorted {
                 return mid - 1;
             }
 
-            if (arr[start] <= arr[end]){
+            if (arr[start] <= arr[mid]){
                 start = mid + 1;
             }else{
                 end = mid - 1;
