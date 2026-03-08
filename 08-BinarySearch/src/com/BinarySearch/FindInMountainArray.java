@@ -2,9 +2,10 @@ package com.BinarySearch;
 
 public class FindInMountainArray {
     public static void main(String[] args) {
-        int[] arr ={2,4,5,7,9,8,6,3,1};
-        int target = 4;
+        int[] arr ={0,4,7,9,12,8,6,3,1};
+        int target = 3;
         int peak = peakIndexInMountainArray(arr);
+        System.out.println(peak);
         int firstCheck = orderAgnosticBS(arr,target,0,peak);
         if(firstCheck != -1){
             System.out.println(firstCheck);
