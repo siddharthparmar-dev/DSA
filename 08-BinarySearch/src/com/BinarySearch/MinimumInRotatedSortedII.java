@@ -2,7 +2,7 @@ package com.BinarySearch;
 
 public class MinimumInRotatedSortedII {
     public static void main(String[] args) {
-        int[] nums = {2,2,2,0,1};
+        int[] nums = {2,2,2,0,1,2};
         System.out.println(findMin(nums));
     }
     static int findMin(int[] arr){
