@@ -17,7 +17,7 @@ public class FindPeakElement {
         int start = 1;
         int end = n-2;
         while (start <= end){
-            int mid = start +(end -start) / 2;
+            int mid = start + (end - start) / 2;
             if (arr[mid - 1] < arr[mid] && arr[mid + 1] < arr[mid]){
                 return mid;
             }

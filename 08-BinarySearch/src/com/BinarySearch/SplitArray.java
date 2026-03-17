@@ -17,17 +17,7 @@ public class SplitArray {
 
         while (start < end){
             int mid = start + (end - start) / 2;
-            int sum = 0;
-            int partitions = 1;
-            for (int num : nums){
-                if (sum + num > mid){
-                    sum = num;
-                    partitions++;
-                }
-                else {
-                    sum += num;
-                }
-            }
+            int partitions = countPartitions(nums,mid);
             if (partitions > k){
                 start = mid + 1;
             }
@@ -36,5 +26,19 @@ public class SplitArray {
             }
         }
         return end;
+    }
+    static int countPartitions(int[] arr,int maxSum){
+        int sum = 0;
+        int partitions = 1;
+        for (int num : arr){
+            if (sum + num <= maxSum){
+                sum += num;
+            }
+            else {
+                sum = num;
+                partitions++;
+            }
+        }
+        return partitions;
     }
 }
