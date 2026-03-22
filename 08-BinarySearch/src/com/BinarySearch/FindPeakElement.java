@@ -2,7 +2,7 @@ package com.BinarySearch;
 
 public class FindPeakElement {
     public static void main(String[] args) {
-        int[] arr = {1,2,1,3,5,6,4};
+        int[] arr = {7,2,1,3,5,16,4};
         System.out.println(peakElement(arr));
     }
     static int peakElement(int[] arr){
