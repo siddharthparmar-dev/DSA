@@ -8,20 +8,20 @@ public class SelectionSort {
         arr = selectionSort(arr);
         System.out.println(Arrays.toString(arr));
     }
-    static int[] selectionSort(int[] nums){
-        int n = nums.length;
+    static int[] selectionSort(int[] arr){
+        int n = arr.length;
         for (int i = 0; i < n; i++) {
             int max = 0;
             int last = n-i-1;
             for (int j = 0; j <= last; j++) {
-                if (nums[j] > nums[max]){
-                    max = j;
+                if (arr[j] > arr[max]){
+                    max = j;  
                 }
             }
-            int temp = nums[max];
-            nums[max] = nums[last];
-            nums[last] = temp;
+            int temp = arr[max];
+            arr[max] = arr[last];
+            arr[last] = temp;
         }
-        return nums;
+        return arr;
     }
 }
