@@ -15,7 +15,7 @@ public class SelectionSort {
             int last = n-i-1;
             for (int j = 0; j <= last; j++) {
                 if (arr[j] > arr[max]){
-                    max = j;  
+                    max = j;
                 }
             }
             int temp = arr[max];
