@@ -1,7 +1,10 @@
 package com.Sorting;
 
 import java.util.Arrays;
-
+/*
+Insertion Sort is a simple sorting algorithm that builds the final sorted array one element at a time by
+inserting each element into its correct position in the already sorted part of the array.
+ */
 public class InsertionSort {
     public static void main(String[] args) {
         int[] nums = {8,1,4,5,9,3};
