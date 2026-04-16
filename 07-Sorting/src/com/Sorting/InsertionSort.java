@@ -7,19 +7,19 @@ public class InsertionSort {
         int[] nums = {8,1,4,5,9,3};
         System.out.println(Arrays.toString(insertionSort(nums)));
     }
-    static int[] insertionSort(int[] arr){
-        int n = arr.length;
+    static int[] insertionSort(int[] nums){
+        int n = nums.length;
         for (int i = 0; i < n-1; i++) {
             for (int j = i+1; j > 0 ; j--) {
-                    if (arr[j] < arr[j-1]){
-                        swap(arr,j,j-1);
+                    if (nums[j] < nums[j-1]){
+                        swap(nums,j,j-1);
                     }
                     else {
                         break;
                     }
             }
         }
-        return arr;
+        return nums;
     }
 
     static void swap(int[] arr,int i,int j){
