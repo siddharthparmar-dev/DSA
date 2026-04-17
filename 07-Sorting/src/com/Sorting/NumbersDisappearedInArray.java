@@ -5,15 +5,30 @@ import java.util.List;
 
 public class NumbersDisappearedInArray {
     static void main(String[] args) {
-
+        int[] arr = {4,3,2,7,8,2,3,1};
+        System.out.println(findDisappearedNumbers(arr));
     }
     static List<Integer> findDisappearedNumbers(int[] nums) {
         int  n = nums.length;
-        List<Integer> ans = new ArrayList<>();
         int i = 0;
        while (i < n){
            int correctIndex = nums[i] - 1;
-           if (nums[i]  )
+           if (nums[i] != nums[correctIndex]){
+               int temp = nums[i];
+               nums[i] = nums[correctIndex];
+               nums[correctIndex] = temp;
+           }
+           else{
+               i++;
+           }
        }
+
+       List<Integer> ans = new ArrayList<>();
+        for (int j = 0; j < n; j++) {
+            if (nums[j] != j+1){
+                ans.add(j+1);
+            }
+        }
+        return ans;
     }
 }
