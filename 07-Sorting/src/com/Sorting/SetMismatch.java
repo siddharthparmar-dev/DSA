@@ -28,6 +28,6 @@ public class SetMismatch {
             }
         }
 
-        return nums;
+        return new int[] {-1,-1};
     }
 }
