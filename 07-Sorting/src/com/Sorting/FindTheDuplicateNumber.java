@@ -2,7 +2,8 @@ package com.Sorting;
 
 public class FindTheDuplicateNumber {
     public static void main(String[] args) {
-
+        int[] arr = {1,3,4,2,2};
+        System.out.println(findDuplicate(arr));
     }
     static int findDuplicate(int[] nums) {
         int  n = nums.length;
@@ -18,9 +19,12 @@ public class FindTheDuplicateNumber {
                 i++;
             }
         }
-
+        int duplicateNumber = -1;
         for (int j = 0; j < n; j++) {
-            
+            if (nums[j] != j){
+                duplicateNumber = nums[j];
+            }
         }
+        return duplicateNumber;
     }
 }
