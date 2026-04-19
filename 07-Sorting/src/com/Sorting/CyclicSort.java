@@ -9,7 +9,7 @@ When given numbers from range 1 to N then use cyclic sort
  */
 public class CyclicSort {
     public static void main(String[] args) {
-        int[] arr = {1,3,4,2,2};
+        int[] arr = {3,4,-1,1};
         System.out.println(Arrays.toString(cyclicSort(arr)));
     }
 
