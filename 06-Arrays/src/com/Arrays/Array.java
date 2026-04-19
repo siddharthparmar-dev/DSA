@@ -14,6 +14,6 @@ public class Array {
         //String
         String[] rolnos = new String[10];
         System.out.println(rolnos[2]); // output: null
-        // non primitive data types have null as defualt value
+        // Non-primitive data types have null as defualt value
     }
 }
