@@ -33,7 +33,9 @@ public class string {
         System.out.println(c); // hello
         System.out.println(d); // hii
 
-        // no changes made because strings ae immutable 
+        // no changes made because strings ae immutable
+        // string are immutable in java
+        
 
 
     }
