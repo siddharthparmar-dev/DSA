@@ -2,7 +2,7 @@ package com.BinarySearch;
 
 public class PeakMountainArray {
     public static void main(String[] args) {
-        int[] arr = {0,4,7,9,12,8,6,3,1};
+        int[] arr = {7,8,9,0,1,2,3,4,5};
         System.out.println(peakIndexInMountainArray(arr));
     }
     static int peakIndexInMountainArray(int[] arr) {
