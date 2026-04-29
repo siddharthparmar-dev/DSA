@@ -1,6 +1,6 @@
 package com.recursion;
 
-public class IntroToRecursion {
+public class Message {
     public static void main(String[] args) {
         //message();
         // what if we have to print this message 5 times
