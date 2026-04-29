@@ -7,7 +7,7 @@ public class Pattern13 {
     static void pattern17(int n){
         for (int row = 1; row < 2*n ; row++) {
             int totalRowsInCols = row <= n ? row : 2*n - row;
-            for (int space = 0; space < n-totalRowsInCols; space++) {
+            for (int space = 1; space <= n-totalRowsInCols; space++) {
                 System.out.print(" ");
             }
             for (int col = totalRowsInCols; col >= 1 ; col--) {

@@ -6,7 +6,7 @@ public class Pattern12 {
     }
     static void pattern11(int n){
         for (int row = 1; row <= n; row++) {
-            for (int spaces = 0; spaces < n-row; spaces++) {
+            for (int spaces = 1; spaces <= n-row; spaces++) {
                 System.out.print("  ");
             }
             for (int col = row; col >= 1; col--) {
