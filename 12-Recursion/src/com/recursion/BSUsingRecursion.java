@@ -16,12 +16,10 @@ public class BSUsingRecursion {
             return mid;
         }
         else if (arr[mid] < target){
-            start = mid + 1;
+            return search(arr,target,mid + 1,end);
         }
         else {
-            end = mid - 1;
+            return search(arr,target,start,mid - 1);
         }
-
-        return search(arr,target,start,end);
     }
 }
