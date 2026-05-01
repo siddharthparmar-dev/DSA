@@ -3,7 +3,7 @@ package com.recursion;
 public class BSUsingRecursion {
     public static void main(String[] args) {
         int[] arr = {14,21,24,27,29};
-        System.out.println(search(arr,24,0,arr.length-1));
+        System.out.println(search(arr,14,0,arr.length-1));
     }
     static int search(int[] arr,int target,int start,int end){
         if (start > end){
