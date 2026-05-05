@@ -1,0 +1,94 @@
+// ===============================
+// ASYMPTOTIC NOTATIONS NOTES
+// ===============================
+
+// These are used to describe how an algorithm grows with input size (n)
+
+// --------------------------------
+// 1. BIG-O (O) → UPPER BOUND
+// --------------------------------
+// Meaning:
+// Represents the WORST-CASE time complexity
+// Tells maximum time an algorithm can take
+
+// Example:
+for(int i = 0; i < n; i++) {
+    // work
+}
+// T(n) = n → O(n)
+
+// Linear Search:
+// Best case  → O(1)
+// Worst case → O(n)  ← we consider this
+
+// Key Point:
+// Big-O focuses on worst-case growth
+
+
+// --------------------------------
+// 2. BIG-OMEGA (Ω) → LOWER BOUND
+// --------------------------------
+// Meaning:
+// Represents the BEST-CASE time complexity
+// Tells minimum time an algorithm will take
+
+// Example:
+if(arr[0] == target) return 0;
+// Only 1 step
+
+// Linear Search:
+// Best case → Ω(1)
+
+// Key Point:
+// Big-Omega focuses on best-case performance
+
+
+// --------------------------------
+// 3. BIG-THETA (Θ) → TIGHT BOUND
+// --------------------------------
+// Meaning:
+// Represents EXACT growth when:
+// upper bound == lower bound
+
+// Example:
+for(int i = 0; i < n; i++) {
+    // work
+}
+// Always runs n times
+
+// So:
+// O(n) AND Ω(n) → Θ(n)
+
+// Key Point:
+// Used when best and worst case are same
+
+
+// --------------------------------
+// QUICK SUMMARY
+// --------------------------------
+// O(f(n))  → worst case (upper bound)
+// Ω(f(n))  → best case (lower bound)
+// Θ(f(n))  → exact/tight bound
+
+
+// --------------------------------
+// INTERVIEW LINE (IMPORTANT)
+// --------------------------------
+// Big-O → maximum time (worst case)
+// Big-Omega → minimum time (best case)
+// Big-Theta → exact time when both are same
+
+// In practice:
+// Mostly we use Big-O (worst case)
+
+
+// --------------------------------
+// EXTRA EXAMPLE
+// --------------------------------
+// Linear Search:
+// Best  → Ω(1)
+// Worst → O(n)
+// Not Θ(n) because time varies
+
+// Simple Loop:
+// O(n), Ω(n) → Θ(n)
