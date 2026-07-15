@@ -1,4 +1,4 @@
-package com.Maths;
+package com.Bitwise;
 
 public class isOdd {
     public static void main(String[] args) {
