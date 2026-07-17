@@ -2,7 +2,7 @@ package com.recursion;
 
 public class FibonacciUsingRecursion {
     public static void main(String[] args) {
-        System.out.println(fibonacci(7));
+        System.out.println(fibonacci(3));
     }
     static int fibonacci(int n){
         if (n < 2){
