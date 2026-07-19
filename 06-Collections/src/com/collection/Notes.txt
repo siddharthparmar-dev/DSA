@@ -1,0 +1,133 @@
+/*
+
+==================== JAVA COLLECTIONS NOTES ====================
+                        Iterable
+                        |
+                        Collection
+                        |
+    ------------------------------------------------
+    |                    |                         |
+    List                Set                      Queue
+
+    Map   // NOT part of Collection interface
+
+-------------------- 1. ARRAYLIST --------------------
+Type: List (Dynamic Array)
+
+✔ Duplicates: YES
+✔ Null: YES
+✔ Order: Maintains insertion order
+✔ Index Access: YES (O(1) fast)
+✔ Insert/Delete: Slow (shifting required)
+✔ Shifting: YES
+
+Use when:
+- Frequent access (read operations)
+- Index-based operations
+
+-----------------------------------------------------
+
+-------------------- 2. LINKEDLIST --------------------
+Type: List (Doubly Linked List)
+
+✔ Duplicates: YES
+✔ Null: YES
+✔ Order: Maintains insertion order
+✔ Index Access: YES but slow (O(n))
+✔ Insert/Delete: FAST (no shifting)
+✔ Shifting: NO
+
+Use when:
+- Frequent insertion/deletion
+- Less access by index
+
+-----------------------------------------------------
+
+-------------------- 3. HASHSET --------------------
+Type: Set (Hashing)
+
+✔ Duplicates: NO
+✔ Null: YES (only one)
+✔ Order: NOT maintained
+✔ Index Access: NO
+✔ Insert/Delete/Search: FAST (O(1))
+
+Use when:
+- Need unique elements
+- Fast lookup required
+
+-----------------------------------------------------
+
+-------------------- 4. TREESET --------------------
+Type: Set (Red-Black Tree)
+
+✔ Duplicates: NO
+✔ Null: NO
+✔ Order: SORTED (ascending)
+✔ Index Access: NO
+✔ Insert/Delete/Search: O(log n)
+
+Use when:
+- Need sorted unique data
+
+-----------------------------------------------------
+
+-------------------- 5. ARRAYDEQUE --------------------
+Type: Deque (Double-ended queue)
+
+✔ Duplicates: YES
+✔ Null: NO
+✔ Order: Maintains insertion order
+✔ Index Access: NO
+✔ Insert/Delete: FAST (both ends)
+
+Use when:
+- Stack + Queue operations
+- Fast add/remove from both ends
+
+-----------------------------------------------------
+
+-------------------- 6. PRIORITY QUEUE --------------------
+Type: Queue (Heap)
+
+✔ Duplicates: YES
+✔ Null: NO
+✔ Order: NOT insertion order (priority-based)
+✔ Index Access: NO
+✔ Insert/Delete: O(log n)
+
+✔ Default: Min Heap (smallest element first)
+
+Use when:
+- Need min/max element quickly
+- Priority-based processing
+
+-----------------------------------------------------
+
+==================== KEY POINTS ====================
+
+1. Shifting happens only in → ArrayList
+
+2. Fastest access → ArrayList (O(1))
+
+3. Fast insert/delete → LinkedList / HashSet / ArrayDeque
+
+4. No duplicates → HashSet, TreeSet
+
+5. Sorted → TreeSet, PriorityQueue
+
+6. Null NOT allowed → TreeSet, ArrayDeque, PriorityQueue
+
+-----------------------------------------------------
+
+==================== QUICK REVISION ====================
+
+ArrayList     → Fast access, slow insert
+LinkedList    → Slow access, fast insert
+HashSet       → Unique, no order
+TreeSet       → Sorted unique
+ArrayDeque    → Fast queue/stack
+PriorityQueue → Priority-based (heap)
+
+=====================================================
+*/

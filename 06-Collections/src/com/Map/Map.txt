@@ -1,0 +1,7 @@
+Map stores key -> value pair
+Collection stores single values
+Map stores key-value pairs
+eg:
+101 -> sid
+102 -> piyush
+103 -> naman

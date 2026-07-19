@@ -1,0 +1,146 @@
+```java
+// ===============================
+// COMPARABLE vs COMPARATOR NOTES
+// ===============================
+
+// ---------------------------------
+// 1. COMPARABLE (Default Sorting)
+// ---------------------------------
+
+import java.util.*;
+
+class Cricketer implements Comparable<Cricketer> {
+    int age;
+    String name;
+
+    public Cricketer(int age, String name) {
+        this.age = age;
+        this.name = name;
+    }
+
+    // Default sorting logic (by age)
+    @Override
+    public int compareTo(Cricketer c) {
+        return this.age - c.age;   // ascending
+    }
+
+    @Override
+    public String toString() {
+        return age + " " + name;
+    }
+}
+
+class ComparableDemo {
+    public static void main(String[] args) {
+        ArrayList<Cricketer> list = new ArrayList<>();
+
+        list.add(new Cricketer(30, "Virat"));
+        list.add(new Cricketer(25, "Rohit"));
+
+        Collections.sort(list);  // uses compareTo()
+
+        System.out.println(list);
+    }
+}
+
+
+// ---------------------------------
+// 2. COMPARATOR (Custom Sorting)
+// ---------------------------------
+
+import java.util.*;
+
+class Cricketer2 {
+    int age;
+    String name;
+    double strikeRate;
+
+    public Cricketer2(int age, String name, double strikeRate) {
+        this.age = age;
+        this.name = name;
+        this.strikeRate = strikeRate;
+    }
+
+    @Override
+    public String toString() {
+        return age + " " + name + " " + strikeRate;
+    }
+}
+
+class ComparatorDemo {
+    public static void main(String[] args) {
+        ArrayList<Cricketer2> list = new ArrayList<>();
+
+        list.add(new Cricketer2(30, "Virat", 140));
+        list.add(new Cricketer2(25, "Rohit", 150));
+        list.add(new Cricketer2(25, "Abhishek", 180));
+
+        // Sort by age (ascending)
+        list.sort((a, b) -> a.age - b.age);
+
+        // Sort by strikeRate (descending)
+        list.sort((a, b) -> Double.compare(b.strikeRate, a.strikeRate));
+
+        // Sort by name (alphabetical)
+        list.sort((a, b) -> a.name.compareTo(b.name));
+
+        System.out.println(list);
+    }
+}
+
+
+// ---------------------------------
+// 3. MULTIPLE SORTING (IMPORTANT)
+// ---------------------------------
+
+// Sort by age, then by name
+list.sort(
+    Comparator.comparingInt((Cricketer2 c) -> c.age)
+              .thenComparing(c -> c.name)
+);
+
+
+// ---------------------------------
+// 4. GOLDEN RULES
+// ---------------------------------
+
+// int comparison
+return a - b;
+
+// double comparison (SAFE)
+return Double.compare(a, b);
+
+// String comparison
+return a.compareTo(b);
+
+
+// ---------------------------------
+// 5. RETURN VALUES MEANING
+// ---------------------------------
+
+// negative  -> first comes before
+// positive  -> first comes after
+// zero      -> equal
+
+
+// ---------------------------------
+// 6. WHEN TO USE WHAT
+// ---------------------------------
+
+// Comparable:
+// - default sorting
+// - inside class
+
+// Comparator:
+// - custom sorting
+// - multiple sorting
+// - most used in real projects
+
+
+// ---------------------------------
+// 7. BEST PRACTICE (REAL WORLD)
+// ---------------------------------
+
+// Use Comparator with lambda
+list.sort((a, b) -> a.age - b.age);
+```
