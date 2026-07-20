@@ -1,6 +1,10 @@
 package com.collection;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
 
 public class arrayList {
     public static void main(String[] args) {
@@ -16,7 +20,7 @@ public class arrayList {
         ArrayList arrayList1 = new ArrayList();
         arrayList1.add(45);
         arrayList1.addAll(arrayList);
-        System.out.println(arrayList1);
+        //System.out.println(arrayList1);
 
 
         ArrayList arrayList2 = new ArrayList();
@@ -24,13 +28,19 @@ public class arrayList {
         arrayList2.add(47);
         arrayList2.add(85);
         arrayList2.add(25);
-        System.out.println(arrayList2);
+        //System.out.println(arrayList2);
         //[54, 47, 85, 25]
         arrayList2.add(2,100);
         // If we add an element at an index which already contains some value, then that value will shift one index right
         // and new value will be placed at that index pos.
         System.out.println(arrayList2);
         //[54, 47, 100, 85, 25]
+
+        Iterator<Integer> iterator = arrayList2.iterator();
+        while (iterator.hasNext()) {
+            System.out.println("Current Element is : " + iterator.next());
+        }
+        ArrayList arrayList3 = (ArrayList) arrayList.clone();
     }
 }
 /*
