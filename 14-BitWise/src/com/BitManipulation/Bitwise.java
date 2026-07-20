@@ -4,6 +4,20 @@ public class Bitwise {
     static void main(String[] args) {
 
         /*
+        | Data Type |    Size (Bits) |   Size (Bytes) | Range                 |
+| --------- | -------------: | -------------: | --------------------- |
+| `byte`    |              8 |              1 | -128 to 127           |
+| `short`   |             16 |              2 | -32,768 to 32,767     |
+| `int`     |             32 |              4 | -2³¹ to 2³¹ - 1       |
+| `long`    |             64 |              8 | -2⁶³ to 2⁶³ - 1       |
+| `float`   |             32 |              4 | ~6–7 decimal digits   |
+| `double`  |             64 |              8 | ~15–16 decimal digits |
+| `char`    |             16 |              2 | 0 to 65,535 (Unicode) |
+| `boolean` | JVM-dependent* | JVM-dependent* | `true` or `false`     |
+
+         */
+
+        /*
             Number System:
             1. Decimal (Base 10)
             {0,1,2,3,4,5,6,7,8,9}
