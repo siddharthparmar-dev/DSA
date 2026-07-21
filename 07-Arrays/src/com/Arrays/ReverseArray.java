@@ -5,29 +5,22 @@ import java.util.Scanner;
 
 public class ReverseArray {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter the size of array:");
-        int[] arr = new int[input.nextInt()];
-        System.out.println("Enter the elements inside array:");
-        for (int i = 0; i < arr.length; i++){
-            arr[i] = input.nextInt();
-        }
-        System.out.println(Arrays.toString(arr));
+        int[] arr = {4,5,9,7,10,17,21};
         reverse(arr);
+        System.out.println(Arrays.toString(arr));
     }
     static void reverse(int[] arr){
-        int start = 0;
-        int end = arr.length - 1;
-        while (start < end){
-            SwapValues(arr,start,end);
-            start++;
-            end--;
+        int i = 0;
+        int j = arr.length - 1;
+        while (i < j){
+            swap(arr,i,j);
+            i++;
+            j--;
         }
-        System.out.println("Reversed array: " + Arrays.toString(arr));
     }
-    static void SwapValues(int[] arr,int index1,int index2){
-        int temp = arr[index1];
-        arr[index1] = arr[index2];
-        arr[index2] = temp;
+    static void swap(int[] arr, int i, int j){
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 }
