@@ -4,9 +4,8 @@ import java.util.Arrays;
 
 public class SquareOfSortedArray {
     static void main(String[] args) {
-        int[] arr = {-14,-9,-3,15};
+        int[] arr = {-14,-9,-3,4,7,12};
         System.out.println(Arrays.toString(sortedSquares2(arr)));
-        System.out.println(Math.abs(-4));
     }
     static int[] sortedSquares2(int[] nums) {
         int[] result = new int[nums.length];

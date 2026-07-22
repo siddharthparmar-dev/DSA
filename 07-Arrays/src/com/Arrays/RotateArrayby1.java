@@ -1,0 +1,36 @@
+package com.Arrays;
+
+import java.util.Arrays;
+
+public class RotateArrayby1 {
+    static void main(String[] args) {
+        int[] arr = {1,2,3,4,5};
+        rightRotateby1(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+    //brute
+    static void rotate(int[] nums) {
+        int temp = nums[0];
+        nums[0] = nums[nums.length - 1];
+        nums[nums.length - 1] = temp;
+    }
+
+    //better
+    static void rightRotateby1(int[] nums) {
+        int n  = nums.length;
+        int temp = nums[n-1];
+        for (int i = n-1; i > 0; i--) {
+            nums[i] = nums[i-1];
+        }
+        nums[0] = temp;
+    }
+
+    static void leftRotateby1(int[] nums) {
+        int n = nums.length;
+        int temp = nums[0];
+        for (int i = 1; i < n; i++) {
+            nums[i-1] = nums[i];
+        }
+        nums[n-1] = temp;
+    }
+}

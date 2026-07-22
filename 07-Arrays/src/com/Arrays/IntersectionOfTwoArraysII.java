@@ -6,9 +6,9 @@ import java.util.HashMap;
 
 public class IntersectionOfTwoArraysII {
     static void main(String[] args) {
-        int[] nums1 = {2};
-        int[] nums2 = {2,2};
-        System.out.println(Arrays.toString(intersection(nums1, nums2)));
+        int[] nums1 = {4,9,5};
+        int[] nums2 = {9,4,9,8,4};
+        System.out.println(Arrays.toString(intersect(nums1, nums2)));
         HashMap<Integer, Integer> map = new HashMap<>();
         map.put(1, 1);
         map.put(2, 2);
@@ -34,7 +34,7 @@ public class IntersectionOfTwoArraysII {
         return res;
     }
 
-    public int[] intersect(int[] nums1, int[] nums2) {
+    static int[] intersect(int[] nums1, int[] nums2) {
         Arrays.sort(nums1);
         Arrays.sort(nums2);
 
