@@ -3,7 +3,7 @@ package com.Arrays;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class MultiDimArrayList {
+public class MultiDimensionArrayList {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         ArrayList<ArrayList<Integer>> list = new ArrayList<>();
